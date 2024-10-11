@@ -1,0 +1,214 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('./cinema-background-concept-vector.jpg');
+    background-size: cover;
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    color: white;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    color: #fff;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0; /* Ajusta el margen superior e inferior de la lista de navegación */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ccc;
+    transform: scale(1.1);
+}
+
+
+main {
+    padding: 20px;
+    margin-top: 40px; /* Aumenta el margen superior */
+}
+
+header {
+    margin-bottom: 20px; /* Agrega un margen inferior */
+}
+
+    
+
+
+/* Estilos para el contenedor de películas */
+#films {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan automáticamente si no caben en una fila */
+    justify-content: space-between; /* Distribuye el espacio entre las tarjetas */
+}
+
+
+/* Estilos para las tarjetas de películas */
+.pelicula-card {
+    width: 18%; /* Reduje el ancho de las tarjetas */
+    margin-bottom: 20px; /* Agrega un espacio entre las tarjetas hacia abajo */
+    margin-top: 20px; /* Agrega un espacio entre las tarjetas hacia arriba */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; /* Agregué posición relativa para permitir el posicionamiento absoluto del contenido */
+}
+
+
+/* Estilos para la imagen de la película */
+.pelicula-card img {
+    width: 100%;
+    height: 100%; /* Asegura que la imagen ocupe toda la altura de la tarjeta */
+    object-fit: cover; /* Hace que la imagen se ajuste para cubrir todo el espacio disponible */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+/* Estilos para el contenedor de la información de la película */
+.pelicula-info {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+    opacity: 0; /* Inicialmente oculto */
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    transform: translateY(-50%); /* Centra verticalmente */
+    top: 50%; /* Centra verticalmente */
+    transition: opacity 0.3s ease; /* Agregamos transición para opacity */
+}
+
+/* Estilos para mostrar la información al pasar el mouse */
+.pelicula-card:hover .pelicula-info {
+    opacity: 1; /* Hacemos que la información sea visible al pasar el mouse */
+}
+
+/* Estilos para los textos de la información de la película */
+.pelicula-info p {
+    margin: 5px 0;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    clear: both; /* Limpiar el float */
+    margin-top: 20px; /* Agregar margen superior para separar del contenido */
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-social-icons img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-social-icons p {
+    font-size: 14px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    border: 1px solid black; /* Agregamos borde */
+    padding: 5px; /* Ajustamos el espaciado interno */
+}
+
+.logo {
+    width: 50px;
+    float: left;
+    margin-right: 20px;
+}
+
+.container {
+    margin-bottom: 20px; /* Agregar margen inferior para separar del pie de página */
+}
+
+/* Estilos adicionales */
+.footer-social-icons img {
+    width: 30px;
+    margin: 0 5px; /* Ajusta el margen entre los íconos sociales */
+}
+
+.footer-social-icons {
+    margin-bottom: 10px; /* Agrega margen inferior a los íconos sociales */
+}
+
+.footer-social-icons, .copyright-bar {
+    margin-top: 10px; /* Agrega margen superior a los elementos del pie de página */
+}
+/* Estilos para el encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 20px; /* Agrega un margen inferior */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0; /* Ajusta el margen superior e inferior de la lista de navegación */
+}
+
+main {
+    padding: 20px;
+    margin-top: 40px; /* Aumenta el margen superior */
+}
+/* Estilos para las opciones seleccionadas */
+select[multiple] option:checked {
+    background-color: rgba(0, 123, 255, 0.1); /* Color de fondo cuando se selecciona */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para la marca de verificación */
+.checkmark {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: none;
+}

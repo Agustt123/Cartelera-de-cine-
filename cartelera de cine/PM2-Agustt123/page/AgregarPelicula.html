@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Película</title>
+    <!-- Enlace al archivo CSS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../front/style/style.css">
+    <link rel="stylesheet" href="../front/style/formulario.css"> <!-- Agregamos el archivo de estilos para el formulario -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CineArgentino</h1>
+            <nav>
+                <ul class="list">
+                    <li>
+                        <a href="../front/index.html">
+                            Página de Películas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../page/AgregarPelicula.html">
+                            Agregar Película
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../page/Sobremiproyecto.html">
+                            Acerca del Proyecto
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../page/acercadelcine.html">
+                            Historia del cine
+                        </a>
+                    </li>
+                   
+                </ul>
+            </nav>
+        </div>
+        <img src="../front/imagen/LOGO-CINE-ARGENTINO.jpg" alt="logo" class="logo">
+    </header>
+
+    <main id="peliculas-container">
+        <section id="formulario" class="container my-5">
+            <h2 class="mb-4 text-white bg-dark p-3">Crear Nueva Película</h2>
+
+            <form id="crear-pelicula-form">
+                <div class="form-group">
+                    <label for="title">Título:</label>
+                    <input type="text" class="form-control" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="year">Año:</label>
+                    <input type="number" class="form-control" id="year" name="year" required>
+                </div>
+                <div class="form-group">
+                    <label for="director">Director:</label>
+                    <input type="text" class="form-control" id="director" name="director" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duración:</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="hours" name="hours" placeholder="Horas">
+                        <div class="input-group-append">
+                            <span class="input-group-text">h</span>
+                        </div>
+                        <input type="number" class="form-control" id="minutes" name="minutes" placeholder="Minutos">
+                        <div class="input-group-append">
+                            <span class="input-group-text">min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="genre">Género:</label>
+                    <select multiple class="form-control" id="genre" name="genre[]" required>
+                        <option value="Action">Action</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Fantasía">Fantasía</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Animación">Animación</option>
+                        <!-- Puedes agregar más opciones de género aquí si es necesario -->
+                    </select>
+                </div>
+                
+                
+                
+                <div class="form-group">
+                    <label for="rate">Puntuación:</label>
+                    <input type="range" class="form-control-range" id="rate" name="rate" min="1" max="10" step="0.1" required>
+                    <output id="rateOutput">5.0</output>
+                </div>
+                <div class="form-group">
+                    <label for="poster">URL del Póster:</label>
+                    <input type="url" class="form-control" id="poster" name="poster" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Crear Película</button>
+                    <button type="button" id="limpiar" class="btn btn-secondary">Limpiar Formulario</button>
+                    
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-social-icons">
+            <img src="../front/imagen/pngwing.com.png" alt="Instagram">
+            <p>Agustin Trachesky</p>
+            <img src="../front/imagen/pngwing.com (1).png" alt="Facebook">
+            <p>Agustin Trachesky</p>
+            <img src="../front/imagen/LOGO-CINE-ARGENTINO.jpg" alt="CINEARG">
+            <p>CINEARG</p>
+        </div>
+        <div class="copyright-bar">
+            &copy; 2024 cineargbsas. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Inclusión de jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Inclusión de bundle.js -->
+    <script src="../front/public/formulario.bundle.js"></script>
+    <script src="../front/scripts/formulario.js"></script>
+</body>
+</html>

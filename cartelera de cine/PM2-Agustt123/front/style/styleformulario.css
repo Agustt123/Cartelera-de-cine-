@@ -1,0 +1,29 @@
+/* Estilos adicionales para el formulario */
+.form-group label {
+    font-weight: bold; /* Hace que las etiquetas de los campos sean más visibles */
+}
+
+#rate {
+    width: 50%; /* Ajusta el ancho de la barra de puntuación */
+    margin-bottom: 10px; /* Agrega un espacio entre la barra de puntuación y el resto de los elementos */
+}
+
+#rateOutput {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold; /* Hace que la salida de la puntuación sea más visible */
+}
+/* Estilos para las opciones seleccionadas */
+select[multiple] option:checked {
+    background-color: rgba(0, 123, 255, 0.1); /* Color de fondo cuando se selecciona */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para la marca de verificación */
+.checkmark {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: none;
+}
